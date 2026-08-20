@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand palette */
+  --color-paper: #F6F8F7;
+  --color-paper-raised: #FFFFFF;
+  --color-ink: #0B2027;
+  --color-ink-soft: #3E5457;
+  --color-teal-900: #0E3B3C;
+  --color-teal-700: #115C59;
+  --color-teal-600: #147D77;
+  --color-teal-500: #1C9C93;
+  --color-teal-100: #E3F1EE;
+  --color-teal-50: #F0F8F6;
+  --color-amber-600: #C6822B;
+  --color-amber-500: #D9A441;
+  --color-amber-100: #FBEBD1;
+  --color-line: #DCE6E4;
+  --color-danger: #B3432B;
+  --color-danger-100: #FBE7E1;
+  --color-success: #2E7D4F;
+  --color-success-100: #E4F3E9;
+
+  --font-display: Fraunces, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+
+@theme inline {
+  --color-paper: var(--color-paper);
+  --color-paper-raised: var(--color-paper-raised);
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-teal-900: var(--color-teal-900);
+  --color-teal-700: var(--color-teal-700);
+  --color-teal-600: var(--color-teal-600);
+  --color-teal-500: var(--color-teal-500);
+  --color-teal-100: var(--color-teal-100);
+  --color-teal-50: var(--color-teal-50);
+  --color-amber-600: var(--color-amber-600);
+  --color-amber-500: var(--color-amber-500);
+  --color-amber-100: var(--color-amber-100);
+  --color-line: var(--color-line);
+  --color-danger: var(--color-danger);
+  --color-danger-100: var(--color-danger-100);
+  --color-success: var(--color-success);
+  --color-success-100: var(--color-success-100);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.font-data {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Visible keyboard focus ring everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-teal-600);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Reference-range meter (signature element) */
+.range-meter {
+  position: relative;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    var(--color-danger) 0%,
+    var(--color-amber-500) 12%,
+    var(--color-success) 30%,
+    var(--color-success) 70%,
+    var(--color-amber-500) 88%,
+    var(--color-danger) 100%
+  );
+  opacity: 0.85;
+}
+
+.range-meter-marker {
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--color-ink);
+  border: 2px solid white;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 1px 3px rgba(11, 32, 39, 0.4);
+}
