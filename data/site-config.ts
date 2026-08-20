@@ -1,4 +1,3 @@
-// ---------------------------------------------------------------------------
 // SITE CONFIG — edit everything about the lab's identity & contact info here.
 // ---------------------------------------------------------------------------
 export const siteConfig = {
