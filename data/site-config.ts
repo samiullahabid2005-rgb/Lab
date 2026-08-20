@@ -6,4 +6,9 @@ export const siteConfig = {
   phone2: "+91 99348 09413",
 
   email: "samiullahabid2005@gmail.com",
+
+  admin: {
+    demoUsername: "doctor",
+    demoPassword: "ChangeMe123!",
+  },
 };
